@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AB895C71BC5A2DA00CC47EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895C61BC5A2DA00CC47EC /* AppDelegate.swift */; };
+		9AB895C91BC5A2DA00CC47EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895C81BC5A2DA00CC47EC /* ViewController.swift */; };
+		9AB895CC1BC5A2DA00CC47EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB895CA1BC5A2DA00CC47EC /* Main.storyboard */; };
+		9AB895CE1BC5A2DA00CC47EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AB895CD1BC5A2DA00CC47EC /* Assets.xcassets */; };
+		9AB895D11BC5A2DA00CC47EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB895CF1BC5A2DA00CC47EC /* LaunchScreen.storyboard */; };
+		9AB895DC1BC5A2DA00CC47EC /* chat_socketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895DB1BC5A2DA00CC47EC /* chat_socketTests.swift */; };
+		9AB895E71BC5A2DA00CC47EC /* chat_socketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895E61BC5A2DA00CC47EC /* chat_socketUITests.swift */; };
+		9AB896051BC5A3F200CC47EC /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895F51BC5A3F200CC47EC /* SocketAckEmitter.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896061BC5A3F200CC47EC /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895F61BC5A3F200CC47EC /* SocketAckManager.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896071BC5A3F200CC47EC /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895F71BC5A3F200CC47EC /* SocketAnyEvent.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896081BC5A3F200CC47EC /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895F81BC5A3F200CC47EC /* SocketEngine.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896091BC5A3F200CC47EC /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895F91BC5A3F200CC47EC /* SocketEngineClient.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB8960A1BC5A3F200CC47EC /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895FA1BC5A3F200CC47EC /* SocketEventHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB8960B1BC5A3F200CC47EC /* SocketFixUTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895FB1BC5A3F200CC47EC /* SocketFixUTF8.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB8960C1BC5A3F200CC47EC /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895FC1BC5A3F200CC47EC /* SocketIOClient.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB8960D1BC5A3F200CC47EC /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895FD1BC5A3F200CC47EC /* SocketIOClientStatus.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB8960E1BC5A3F200CC47EC /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895FE1BC5A3F200CC47EC /* SocketLogger.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB8960F1BC5A3F200CC47EC /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB895FF1BC5A3F200CC47EC /* SocketPacket.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896101BC5A3F200CC47EC /* SocketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB896001BC5A3F200CC47EC /* SocketParser.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896111BC5A3F200CC47EC /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB896011BC5A3F200CC47EC /* SocketStringReader.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896121BC5A3F200CC47EC /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB896021BC5A3F200CC47EC /* SocketTypes.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896131BC5A3F200CC47EC /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB896031BC5A3F200CC47EC /* SwiftRegex.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896141BC5A3F200CC47EC /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB896041BC5A3F200CC47EC /* WebSocket.swift */; settings = {ASSET_TAGS = (); }; };
+		9AB896161BC5AF1200CC47EC /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB896151BC5AF1200CC47EC /* MessageCell.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AB895D81BC5A2DA00CC47EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB895BB1BC5A2DA00CC47EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AB895C21BC5A2DA00CC47EC;
+			remoteInfo = chat_socket;
+		};
+		9AB895E31BC5A2DA00CC47EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB895BB1BC5A2DA00CC47EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AB895C21BC5A2DA00CC47EC;
+			remoteInfo = chat_socket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9AB895C31BC5A2DA00CC47EC /* chat_socket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat_socket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB895C61BC5A2DA00CC47EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9AB895C81BC5A2DA00CC47EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9AB895CB1BC5A2DA00CC47EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9AB895CD1BC5A2DA00CC47EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9AB895D01BC5A2DA00CC47EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9AB895D21BC5A2DA00CC47EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB895D71BC5A2DA00CC47EC /* chat_socketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chat_socketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB895DB1BC5A2DA00CC47EC /* chat_socketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat_socketTests.swift; sourceTree = "<group>"; };
+		9AB895DD1BC5A2DA00CC47EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB895E21BC5A2DA00CC47EC /* chat_socketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chat_socketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB895E61BC5A2DA00CC47EC /* chat_socketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat_socketUITests.swift; sourceTree = "<group>"; };
+		9AB895E81BC5A2DA00CC47EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB895F51BC5A3F200CC47EC /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketAckEmitter.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketAckEmitter.swift"; sourceTree = "<group>"; };
+		9AB895F61BC5A3F200CC47EC /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketAckManager.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketAckManager.swift"; sourceTree = "<group>"; };
+		9AB895F71BC5A3F200CC47EC /* SocketAnyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketAnyEvent.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketAnyEvent.swift"; sourceTree = "<group>"; };
+		9AB895F81BC5A3F200CC47EC /* SocketEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketEngine.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketEngine.swift"; sourceTree = "<group>"; };
+		9AB895F91BC5A3F200CC47EC /* SocketEngineClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketEngineClient.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketEngineClient.swift"; sourceTree = "<group>"; };
+		9AB895FA1BC5A3F200CC47EC /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketEventHandler.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketEventHandler.swift"; sourceTree = "<group>"; };
+		9AB895FB1BC5A3F200CC47EC /* SocketFixUTF8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketFixUTF8.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketFixUTF8.swift"; sourceTree = "<group>"; };
+		9AB895FC1BC5A3F200CC47EC /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketIOClient.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketIOClient.swift"; sourceTree = "<group>"; };
+		9AB895FD1BC5A3F200CC47EC /* SocketIOClientStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketIOClientStatus.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketIOClientStatus.swift"; sourceTree = "<group>"; };
+		9AB895FE1BC5A3F200CC47EC /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketLogger.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketLogger.swift"; sourceTree = "<group>"; };
+		9AB895FF1BC5A3F200CC47EC /* SocketPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketPacket.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketPacket.swift"; sourceTree = "<group>"; };
+		9AB896001BC5A3F200CC47EC /* SocketParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketParser.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketParser.swift"; sourceTree = "<group>"; };
+		9AB896011BC5A3F200CC47EC /* SocketStringReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketStringReader.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketStringReader.swift"; sourceTree = "<group>"; };
+		9AB896021BC5A3F200CC47EC /* SocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketTypes.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SocketTypes.swift"; sourceTree = "<group>"; };
+		9AB896031BC5A3F200CC47EC /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftRegex.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/SwiftRegex.swift"; sourceTree = "<group>"; };
+		9AB896041BC5A3F200CC47EC /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = "../../../../../Downloads/socket.io-client-swift-master/SocketIOClientSwift/WebSocket.swift"; sourceTree = "<group>"; };
+		9AB896151BC5AF1200CC47EC /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AB895C01BC5A2DA00CC47EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB895D41BC5A2DA00CC47EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB895DF1BC5A2DA00CC47EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AB895BA1BC5A2DA00CC47EC = {
+			isa = PBXGroup;
+			children = (
+				9AB895C51BC5A2DA00CC47EC /* chat_socket */,
+				9AB895DA1BC5A2DA00CC47EC /* chat_socketTests */,
+				9AB895E51BC5A2DA00CC47EC /* chat_socketUITests */,
+				9AB895C41BC5A2DA00CC47EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AB895C41BC5A2DA00CC47EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AB895C31BC5A2DA00CC47EC /* chat_socket.app */,
+				9AB895D71BC5A2DA00CC47EC /* chat_socketTests.xctest */,
+				9AB895E21BC5A2DA00CC47EC /* chat_socketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AB895C51BC5A2DA00CC47EC /* chat_socket */ = {
+			isa = PBXGroup;
+			children = (
+				9AB895F41BC5A39100CC47EC /* SocketIO */,
+				9AB895C61BC5A2DA00CC47EC /* AppDelegate.swift */,
+				9AB895C81BC5A2DA00CC47EC /* ViewController.swift */,
+				9AB896151BC5AF1200CC47EC /* MessageCell.swift */,
+				9AB895CA1BC5A2DA00CC47EC /* Main.storyboard */,
+				9AB895CD1BC5A2DA00CC47EC /* Assets.xcassets */,
+				9AB895CF1BC5A2DA00CC47EC /* LaunchScreen.storyboard */,
+				9AB895D21BC5A2DA00CC47EC /* Info.plist */,
+			);
+			path = chat_socket;
+			sourceTree = "<group>";
+		};
+		9AB895DA1BC5A2DA00CC47EC /* chat_socketTests */ = {
+			isa = PBXGroup;
+			children = (
+				9AB895DB1BC5A2DA00CC47EC /* chat_socketTests.swift */,
+				9AB895DD1BC5A2DA00CC47EC /* Info.plist */,
+			);
+			path = chat_socketTests;
+			sourceTree = "<group>";
+		};
+		9AB895E51BC5A2DA00CC47EC /* chat_socketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9AB895E61BC5A2DA00CC47EC /* chat_socketUITests.swift */,
+				9AB895E81BC5A2DA00CC47EC /* Info.plist */,
+			);
+			path = chat_socketUITests;
+			sourceTree = "<group>";
+		};
+		9AB895F41BC5A39100CC47EC /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				9AB895F51BC5A3F200CC47EC /* SocketAckEmitter.swift */,
+				9AB895F61BC5A3F200CC47EC /* SocketAckManager.swift */,
+				9AB895F71BC5A3F200CC47EC /* SocketAnyEvent.swift */,
+				9AB895F81BC5A3F200CC47EC /* SocketEngine.swift */,
+				9AB895F91BC5A3F200CC47EC /* SocketEngineClient.swift */,
+				9AB895FA1BC5A3F200CC47EC /* SocketEventHandler.swift */,
+				9AB895FB1BC5A3F200CC47EC /* SocketFixUTF8.swift */,
+				9AB895FC1BC5A3F200CC47EC /* SocketIOClient.swift */,
+				9AB895FD1BC5A3F200CC47EC /* SocketIOClientStatus.swift */,
+				9AB895FE1BC5A3F200CC47EC /* SocketLogger.swift */,
+				9AB895FF1BC5A3F200CC47EC /* SocketPacket.swift */,
+				9AB896001BC5A3F200CC47EC /* SocketParser.swift */,
+				9AB896011BC5A3F200CC47EC /* SocketStringReader.swift */,
+				9AB896021BC5A3F200CC47EC /* SocketTypes.swift */,
+				9AB896031BC5A3F200CC47EC /* SwiftRegex.swift */,
+				9AB896041BC5A3F200CC47EC /* WebSocket.swift */,
+			);
+			name = SocketIO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9AB895C21BC5A2DA00CC47EC /* chat_socket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB895EB1BC5A2DA00CC47EC /* Build configuration list for PBXNativeTarget "chat_socket" */;
+			buildPhases = (
+				9AB895BF1BC5A2DA00CC47EC /* Sources */,
+				9AB895C01BC5A2DA00CC47EC /* Frameworks */,
+				9AB895C11BC5A2DA00CC47EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chat_socket;
+			productName = chat_socket;
+			productReference = 9AB895C31BC5A2DA00CC47EC /* chat_socket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9AB895D61BC5A2DA00CC47EC /* chat_socketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB895EE1BC5A2DA00CC47EC /* Build configuration list for PBXNativeTarget "chat_socketTests" */;
+			buildPhases = (
+				9AB895D31BC5A2DA00CC47EC /* Sources */,
+				9AB895D41BC5A2DA00CC47EC /* Frameworks */,
+				9AB895D51BC5A2DA00CC47EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AB895D91BC5A2DA00CC47EC /* PBXTargetDependency */,
+			);
+			name = chat_socketTests;
+			productName = chat_socketTests;
+			productReference = 9AB895D71BC5A2DA00CC47EC /* chat_socketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9AB895E11BC5A2DA00CC47EC /* chat_socketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB895F11BC5A2DA00CC47EC /* Build configuration list for PBXNativeTarget "chat_socketUITests" */;
+			buildPhases = (
+				9AB895DE1BC5A2DA00CC47EC /* Sources */,
+				9AB895DF1BC5A2DA00CC47EC /* Frameworks */,
+				9AB895E01BC5A2DA00CC47EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AB895E41BC5A2DA00CC47EC /* PBXTargetDependency */,
+			);
+			name = chat_socketUITests;
+			productName = chat_socketUITests;
+			productReference = 9AB895E21BC5A2DA00CC47EC /* chat_socketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AB895BB1BC5A2DA00CC47EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Computer;
+				TargetAttributes = {
+					9AB895C21BC5A2DA00CC47EC = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = ZYEHCDLV75;
+					};
+					9AB895D61BC5A2DA00CC47EC = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 9AB895C21BC5A2DA00CC47EC;
+					};
+					9AB895E11BC5A2DA00CC47EC = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 9AB895C21BC5A2DA00CC47EC;
+					};
+				};
+			};
+			buildConfigurationList = 9AB895BE1BC5A2DA00CC47EC /* Build configuration list for PBXProject "chat_socket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9AB895BA1BC5A2DA00CC47EC;
+			productRefGroup = 9AB895C41BC5A2DA00CC47EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9AB895C21BC5A2DA00CC47EC /* chat_socket */,
+				9AB895D61BC5A2DA00CC47EC /* chat_socketTests */,
+				9AB895E11BC5A2DA00CC47EC /* chat_socketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AB895C11BC5A2DA00CC47EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB895D11BC5A2DA00CC47EC /* LaunchScreen.storyboard in Resources */,
+				9AB895CE1BC5A2DA00CC47EC /* Assets.xcassets in Resources */,
+				9AB895CC1BC5A2DA00CC47EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB895D51BC5A2DA00CC47EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB895E01BC5A2DA00CC47EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AB895BF1BC5A2DA00CC47EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB8960B1BC5A3F200CC47EC /* SocketFixUTF8.swift in Sources */,
+				9AB896091BC5A3F200CC47EC /* SocketEngineClient.swift in Sources */,
+				9AB8960E1BC5A3F200CC47EC /* SocketLogger.swift in Sources */,
+				9AB896101BC5A3F200CC47EC /* SocketParser.swift in Sources */,
+				9AB896081BC5A3F200CC47EC /* SocketEngine.swift in Sources */,
+				9AB896071BC5A3F200CC47EC /* SocketAnyEvent.swift in Sources */,
+				9AB896111BC5A3F200CC47EC /* SocketStringReader.swift in Sources */,
+				9AB896141BC5A3F200CC47EC /* WebSocket.swift in Sources */,
+				9AB8960D1BC5A3F200CC47EC /* SocketIOClientStatus.swift in Sources */,
+				9AB8960F1BC5A3F200CC47EC /* SocketPacket.swift in Sources */,
+				9AB896161BC5AF1200CC47EC /* MessageCell.swift in Sources */,
+				9AB896061BC5A3F200CC47EC /* SocketAckManager.swift in Sources */,
+				9AB896121BC5A3F200CC47EC /* SocketTypes.swift in Sources */,
+				9AB8960C1BC5A3F200CC47EC /* SocketIOClient.swift in Sources */,
+				9AB8960A1BC5A3F200CC47EC /* SocketEventHandler.swift in Sources */,
+				9AB896051BC5A3F200CC47EC /* SocketAckEmitter.swift in Sources */,
+				9AB896131BC5A3F200CC47EC /* SwiftRegex.swift in Sources */,
+				9AB895C91BC5A2DA00CC47EC /* ViewController.swift in Sources */,
+				9AB895C71BC5A2DA00CC47EC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB895D31BC5A2DA00CC47EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB895DC1BC5A2DA00CC47EC /* chat_socketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB895DE1BC5A2DA00CC47EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB895E71BC5A2DA00CC47EC /* chat_socketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AB895D91BC5A2DA00CC47EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AB895C21BC5A2DA00CC47EC /* chat_socket */;
+			targetProxy = 9AB895D81BC5A2DA00CC47EC /* PBXContainerItemProxy */;
+		};
+		9AB895E41BC5A2DA00CC47EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AB895C21BC5A2DA00CC47EC /* chat_socket */;
+			targetProxy = 9AB895E31BC5A2DA00CC47EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9AB895CA1BC5A2DA00CC47EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AB895CB1BC5A2DA00CC47EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9AB895CF1BC5A2DA00CC47EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AB895D01BC5A2DA00CC47EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9AB895E91BC5A2DA00CC47EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9AB895EA1BC5A2DA00CC47EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AB895EC1BC5A2DA00CC47EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = chat_socket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Taylor.chat-socket";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9AB895ED1BC5A2DA00CC47EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = chat_socket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Taylor.chat-socket";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9AB895EF1BC5A2DA00CC47EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = chat_socketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Taylor.chat-socketTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chat_socket.app/chat_socket";
+			};
+			name = Debug;
+		};
+		9AB895F01BC5A2DA00CC47EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = chat_socketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Taylor.chat-socketTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chat_socket.app/chat_socket";
+			};
+			name = Release;
+		};
+		9AB895F21BC5A2DA00CC47EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = chat_socketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Taylor.chat-socketUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = chat_socket;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9AB895F31BC5A2DA00CC47EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = chat_socketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Taylor.chat-socketUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = chat_socket;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AB895BE1BC5A2DA00CC47EC /* Build configuration list for PBXProject "chat_socket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB895E91BC5A2DA00CC47EC /* Debug */,
+				9AB895EA1BC5A2DA00CC47EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AB895EB1BC5A2DA00CC47EC /* Build configuration list for PBXNativeTarget "chat_socket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB895EC1BC5A2DA00CC47EC /* Debug */,
+				9AB895ED1BC5A2DA00CC47EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9AB895EE1BC5A2DA00CC47EC /* Build configuration list for PBXNativeTarget "chat_socketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB895EF1BC5A2DA00CC47EC /* Debug */,
+				9AB895F01BC5A2DA00CC47EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9AB895F11BC5A2DA00CC47EC /* Build configuration list for PBXNativeTarget "chat_socketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB895F21BC5A2DA00CC47EC /* Debug */,
+				9AB895F31BC5A2DA00CC47EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AB895BB1BC5A2DA00CC47EC /* Project object */;
+}
