@@ -101,13 +101,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageCell") as! MessageCell
         let message = self.messages[indexPath.row]
-        cell.messageTextLabel.text = message["content"]
+        let timeString = getTimeString()
+        let name = message["name"]!
+//        I need to shorten this code
+        if message["ownedByMe"] == "yes" {
+            cell.rightMessageTextLabel.text = message["content"]
+            cell.rightNameTextLabel.text = " \(name) at \(timeString)"
+            cell.messageTextLabel.hidden = true
+            cell.nameTextLabel.hidden = true
+            cell.backgroundColor = UIColorFromRGB(832755)
+        } else {
+            cell.rightMessageTextLabel.hidden = true
+            cell.rightNameTextLabel.hidden = true
+            cell.messageTextLabel.text = message["content"]
+            cell.nameTextLabel.text = " \(name) at \(timeString)"
+            cell.backgroundColor = UIColorFromRGB(484704)
+        }
         self.messages[indexPath.row]["index"] = String([indexPath.row])
         print(message)
-        if message["ownedByMe"] == "no" {
-            print("we don't thing it's yours")
-            
-        }
         return cell
     }
     @IBAction func chatButtonPressed(sender: UIButton) {
@@ -118,6 +129,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
             dictionaryToPasss["message_id"] = randomStringWithLength(10) as String
             dictionaryToPasss["name"] = self.userName!
             socket.emit("message_sent", dictionaryToPasss);
+            self.chatTextField.text = ""
         } else {
             showAlert()
         }
@@ -130,14 +142,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
             return false
         }
     }
-    
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             socket.emit("message_deleted", self.messages[indexPath.row])
             // handle delete (by removing the data from your array and updating the tableview)
         }
     }
-    
     func showAlert(){
         var alertController:UIAlertController?
         alertController = UIAlertController(title: "Username",
@@ -167,6 +177,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
             animated: true,
             completion: nil)
     }
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    func getTimeString() -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.timeStyle = .ShortStyle
+        let timeString = "\(dateFormatter.stringFromDate(NSDate()))"
+        return timeString
+    }
     func randomStringWithLength (len : Int) -> NSString {
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let randomString : NSMutableString = NSMutableString(capacity: len)
@@ -176,5 +200,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
             randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
         }
         return randomString
+    }
+//    status bar color
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 }

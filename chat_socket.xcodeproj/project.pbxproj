@@ -562,6 +562,7 @@
 				9AB895ED1BC5A2DA00CC47EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AB895EE1BC5A2DA00CC47EC /* Build configuration list for PBXNativeTarget "chat_socketTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +571,7 @@
 				9AB895F01BC5A2DA00CC47EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AB895F11BC5A2DA00CC47EC /* Build configuration list for PBXNativeTarget "chat_socketUITests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +580,7 @@
 				9AB895F31BC5A2DA00CC47EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
