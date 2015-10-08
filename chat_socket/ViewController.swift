@@ -11,19 +11,18 @@
 
 
 import UIKit
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate {
     
-    @IBOutlet weak var infoTextLabel: UILabel!
     @IBOutlet weak var chatTextField: UITextField!
     @IBOutlet weak var chatTable: UITableView!
-    
-    let socket = SocketIOClient(socketURL: "192.168.1.242:8000")
+    let socket = SocketIOClient(socketURL: "192.168.1.5:8000")
     var userId: String?
     var userName: String?
     var messages = Array<[String:String]>()
 //    alert dialoge
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.chatTextField.delegate = self
         var alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
         let action = UIAlertAction(title:"OK", style:UIAlertActionStyle.Default){(ACTION) in
         }
@@ -35,6 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             print("iOS::WE ARE USING SOCKETS!")
         }
         socket.on("chat_response") {data, ack in
+//            There has GOT! to be a better way to build this dictionary
             var newMessage = [String:String]()
             let content = data[0]["content"] as! String
             let name = data[0]["name"] as! String
@@ -60,11 +60,40 @@ class ViewController: UIViewController, UITableViewDataSource {
 //            loop checks by message_id whether whether we have something to delete and deletes it. It ends with a table reload.
             for var index = 0; index < self.messages.count; ++index {
                 if String(self.messages[index]["message_id"]!) == String(data[0]["message_id"]!!) {
-                    self.messages.removeAtIndex(0)
+                    self.messages.removeAtIndex(index)
                     self.chatTable.reloadData()
                 }
             }
         }
+    }
+    func textFieldDidBeginEditing(textField: UITextField) { // became first responder
+        
+        //move textfields up
+        let myScreenRect: CGRect = UIScreen.mainScreen().bounds
+        let keyboardHeight : CGFloat = 216
+        
+        UIView.beginAnimations( "animateView", context: nil)
+        var movementDuration:NSTimeInterval = 0.35
+        var needToMove: CGFloat = 0
+        
+        var frame : CGRect = self.view.frame
+        if (textField.frame.origin.y + textField.frame.size.height + /*self.navigationController.navigationBar.frame.size.height + */UIApplication.sharedApplication().statusBarFrame.size.height > (myScreenRect.size.height - keyboardHeight)) {
+            needToMove = (textField.frame.origin.y + textField.frame.size.height + 19 + /*self.navigationController.navigationBar.frame.size.height +*/ UIApplication.sharedApplication().statusBarFrame.size.height) - (myScreenRect.size.height - keyboardHeight);
+        }
+        
+        frame.origin.y = -needToMove
+        self.view.frame = frame
+        UIView.commitAnimations()
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        //move textfields back down
+        UIView.beginAnimations( "animateView", context: nil)
+        var movementDuration:NSTimeInterval = 0.35
+        var frame : CGRect = self.view.frame
+        frame.origin.y = 0
+        self.view.frame = frame
+        UIView.commitAnimations()
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.messages.count
@@ -74,11 +103,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         let message = self.messages[indexPath.row]
         cell.messageTextLabel.text = message["content"]
         self.messages[indexPath.row]["index"] = String([indexPath.row])
-        cell.nameTextLabel.text = message["name"]
         print(message)
         if message["ownedByMe"] == "no" {
             print("we don't thing it's yours")
-            cell.deleteButton.hidden = true
+            
         }
         return cell
     }
@@ -94,12 +122,20 @@ class ViewController: UIViewController, UITableViewDataSource {
             showAlert()
         }
     }
-    @IBAction func deleteButtonPressed(sender: AnyObject) {
-        let button = sender as! UIButton
-        let view = button.superview!
-        let cell = view.superview as! MessageCell
-        let indexPath = self.chatTable.indexPathForCell(cell)!
-        socket.emit("message_deleted", self.messages[indexPath.row])
+    func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+        let message = self.messages[indexPath.row]
+        if message["ownedByMe"] == "yes" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            socket.emit("message_deleted", self.messages[indexPath.row])
+            // handle delete (by removing the data from your array and updating the tableview)
+        }
     }
     
     func showAlert(){

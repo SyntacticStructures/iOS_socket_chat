@@ -10,8 +10,5 @@ import UIKit
 
 class MessageCell: UITableViewCell {
     
-
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var nameTextLabel: UILabel!
     @IBOutlet weak var messageTextLabel: UILabel!
 }
