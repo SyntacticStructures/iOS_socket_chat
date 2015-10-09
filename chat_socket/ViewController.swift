@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     
     @IBOutlet weak var chatTextField: UITextField!
     @IBOutlet weak var chatTable: UITableView!
-    let socket = SocketIOClient(socketURL: "192.168.1.5:8000")
+    let socket = SocketIOClient(socketURL: "192.168.1.240:8000")
     var userId: String?
     var userName: String?
     var messages = Array<[String:String]>()
@@ -111,11 +111,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
             cell.nameTextLabel.hidden = true
             cell.backgroundColor = UIColorFromRGB(832755)
         } else {
+            print(message["content"])
             cell.rightMessageTextLabel.hidden = true
             cell.rightNameTextLabel.hidden = true
             cell.messageTextLabel.text = message["content"]
             cell.nameTextLabel.text = " \(name) at \(timeString)"
-            cell.backgroundColor = UIColorFromRGB(484704)
+            cell.backgroundColor = UIColorFromRGB(23409)
         }
         self.messages[indexPath.row]["index"] = String([indexPath.row])
         print(message)
@@ -201,7 +202,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         }
         return randomString
     }
-//    status bar color
+//    status bar color. You can do this in info.plist too, but you can also set the ability to do it programattically in info.plist
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }

@@ -17,9 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-7J-uK9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-7J-uK9">
                                 <rect key="frame" x="20" y="550" width="521" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.63557580486484655" blue="0.57031712535541601" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2jG-PJ-bMG"/>
+                                </constraints>
                                 <color key="textColor" red="0.9743331755050505" green="0.9743331755050505" blue="0.9743331755050505" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -124,10 +127,12 @@
                             <constraint firstAttribute="leadingMargin" secondItem="wGh-7J-uK9" secondAttribute="leading" id="EvE-Sl-Pgc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0yR-9V-eMg" secondAttribute="trailing" constant="1" id="UWd-vR-IMR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0yR-9V-eMg" secondAttribute="bottom" id="Zl3-fw-oAW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0yR-9V-eMg" secondAttribute="bottom" constant="20" id="eBm-Vo-Iup"/>
                             <constraint firstItem="0yR-9V-eMg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ljk-i1-fHb"/>
                             <constraint firstItem="wGh-7J-uK9" firstAttribute="top" secondItem="bHa-wc-8Df" secondAttribute="bottom" constant="8" symbolic="YES" id="mE5-xU-IXr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wGh-7J-uK9" secondAttribute="bottom" constant="20" id="my7-rm-yBG"/>
                             <constraint firstAttribute="trailing" secondItem="bHa-wc-8Df" secondAttribute="trailing" id="q3e-OC-GND"/>
+                            <constraint firstItem="0yR-9V-eMg" firstAttribute="leading" secondItem="wGh-7J-uK9" secondAttribute="trailing" constant="9" id="r2N-tk-9nN"/>
                             <constraint firstItem="0yR-9V-eMg" firstAttribute="centerY" secondItem="wGh-7J-uK9" secondAttribute="centerY" id="rMe-1O-U4E"/>
                             <constraint firstItem="bHa-wc-8Df" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="sNq-zh-DRg"/>
                             <constraint firstItem="bHa-wc-8Df" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x2C-ir-bNc"/>
